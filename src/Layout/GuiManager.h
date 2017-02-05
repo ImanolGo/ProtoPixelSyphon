@@ -107,6 +107,7 @@ private:
     ofParameter<float>      m_hue;
     ofParameter<float>      m_brightness;
     ofParameter<float>      m_saturation;
+    ofParameter<float>      m_blurRadius;
     
    
     bool        m_showGui;  //It defines the whether the gui should be shown or not

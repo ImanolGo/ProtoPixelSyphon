@@ -10,6 +10,7 @@
 
 #include "Manager.h"
 #include "ofxSyphon.h"
+#include "ofxBlur.h"
 
 //========================== class VideoOutputManager ==============================
 //============================================================================
@@ -44,19 +45,26 @@ public:
     void end();
     
     const ofFbo& getVideoFbo() {return m_fboVideoOutput;}
+    
+    void onBlurScaleChange(float& value);
 
 private:
 
-    //! Set-up the fbos
+    //! Set-up the fbo
     void setupFbo();
     
     //! Set-up the syphon server
     void setupSyphon();
+    
+    //! Set-up the blur filter
+    void setupBlur();
 
 private:
     
     ofFbo               m_fboVideoOutput;
     ofxSyphonServer     m_syphonServer;
+    ofxBlur             m_blur;
+    float               m_blurScale;
 
 };
 

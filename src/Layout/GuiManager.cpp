@@ -85,6 +85,7 @@ void GuiManager::setupModesGui()
 void GuiManager::setupLayoutGui()
 {
     auto layoutManager = &AppManager::getInstance().getLayoutManager();
+    auto videoOutputManager = &AppManager::getInstance().getVideoOutputManager();
     
     m_parametersLayout.setName("Color");
     
@@ -99,6 +100,10 @@ void GuiManager::setupLayoutGui()
     m_brightness.set("Brightness", 0.0, 0.0, 255.0);
     m_brightness.addListener(layoutManager, &LayoutManager::onBrightnessChange);
     m_parametersLayout.add(m_brightness);
+    
+    m_blurRadius.set("Blur", 0.0, 0.0, 10.0);
+    m_blurRadius.addListener(videoOutputManager, &VideoOutputManager::onBlurScaleChange);
+    m_parametersLayout.add(m_blurRadius);
     
     m_gui.add(m_parametersLayout);
 }
@@ -207,7 +212,8 @@ void GuiManager::drawRectangle()
 
 void GuiManager::onSetVideoMode(bool& value)
 {
-    if(value == true){
+    if(value == true)
+    {
         m_noiseMode = false;
         m_audioMode = false;
         AppManager::getInstance().getVideoManager().onPlayVideoChange(true);
@@ -219,7 +225,8 @@ void GuiManager::onSetVideoMode(bool& value)
 
 void GuiManager::onSetNoiseMode(bool& value)
 {
-    if(value == true){
+    if(value == true)
+    {
         m_videoMode = false;
         m_audioMode = false;
         AppManager::getInstance().getVideoManager().onPlayVideoChange(false);
@@ -230,7 +237,8 @@ void GuiManager::onSetNoiseMode(bool& value)
 
 void GuiManager::onSetAudioMode(bool& value)
 {
-    if(value == true){
+    if(value == true)
+    {
         m_videoMode = false;
         m_noiseMode = false;
         AppManager::getInstance().getVideoManager().onPlayVideoChange(false);
