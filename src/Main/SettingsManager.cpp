@@ -111,9 +111,6 @@ void SettingsManager::setWindowProperties()
         m_appWidth = ofToInt(attributes["width"]);
         m_appHeight= ofToInt(attributes["height"]);
         
-        m_appWidth = ofGetScreenWidth();
-        m_appHeight = ofGetScreenHeight();
-        
         int x = ofToInt(attributes["x"]);
         int y = ofToInt(attributes["y"]);
         bool fullscreen = ofToBool(attributes["fullscreen"]);
@@ -145,6 +142,7 @@ void SettingsManager::setNetworkProperties()
         
         m_port  = ofToInt(attributes["port"]);
         m_ipAddress  = ofToString(attributes["ipAddress"]);
+        m_syphonName = ofToString(attributes["syphon"]);
         
         
         ofLogNotice() <<"SettingsManager::setNetworkProperties->  successfully loaded the network settings" ;

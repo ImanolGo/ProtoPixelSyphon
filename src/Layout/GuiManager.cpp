@@ -14,7 +14,7 @@
 
 const string GuiManager::GUI_SETTINGS_FILE_NAME = "xmls/GuiSettings.xml";
 const string GuiManager::GUI_SETTINGS_NAME = "HeroDress";
-const int GuiManager::GUI_WIDTH = 350;
+const int GuiManager::GUI_WIDTH = 200;
 
 
 GuiManager::GuiManager(): Manager(), m_showGui(true)
@@ -111,12 +111,6 @@ void GuiManager::setupVideoGui()
     
     m_nextVideo.setup("Next Video");
     m_nextVideo.addListener(videoManager, &VideoManager::onNextVideoChange);
-    
-    
-    m_recordVideoLoops.set("Record Video Loops", false);
-    m_recordVideoLoops.addListener(videoManager, &VideoManager::onRecordVideoLoopsChange);
-    m_parametersVideo.add(m_recordVideoLoops);
-    
     
     m_videoTrail.set("Video Trail", false);
     m_videoTrail.addListener(videoManager, &VideoManager::onVideoTrailChange);

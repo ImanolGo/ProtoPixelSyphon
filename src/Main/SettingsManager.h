@@ -49,6 +49,8 @@ public:
     
     string getIpAddress() const {return m_ipAddress;}
     
+    string getSyphonName() const {return m_syphonName;}
+    
     int getPort() const {return m_port;}
     
     
@@ -92,6 +94,7 @@ private:
     float                   m_appHeight;            ///< stores the applications height
     int                     m_port;                 ///< stores the UDP port used for the Network communications
     string                  m_ipAddress;             ///< stores the Ip Address used for the Network communications
+    string                  m_syphonName;           ///<stores the name of the syphon pipe name
     
 };
 

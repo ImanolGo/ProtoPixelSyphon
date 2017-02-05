@@ -23,6 +23,7 @@
 #include "NoiseManager.h"
 #include "VideoManager.h"
 #include "AudioVisualsManager.h"
+#include "VideoOutputManager.h"
 
 
 //========================== class AppManager ==============================
@@ -80,6 +81,10 @@ public:
     //! Returns the audio visuals manager
     AudioVisualsManager&   getAudioVisualsManager() { return m_audioVisualsManager; }
     
+    //! Returns the video output manager
+    VideoOutputManager&   getVideoOutputManager() { return m_videoOutputManager; }
+    
+    
     //==========================================================================
     
     void toggleDebugMode();
@@ -122,6 +127,7 @@ private:
     NoiseManager             m_noiseManager;             ///< Manages the noise visuals
     VideoManager             m_videoManager;             ///< Manages the video  visuals
     AudioVisualsManager      m_audioVisualsManager;      ///< Manages the audio reactive visuals
+    VideoOutputManager       m_videoOutputManager;       ///< Manages the video output
 
     bool                     m_debugMode;
 };

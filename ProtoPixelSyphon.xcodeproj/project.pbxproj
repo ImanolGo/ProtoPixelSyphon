@@ -14,6 +14,9 @@
 		087E18FA1E4765970051AFE3 /* ofxFFTFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E18F51E4765970051AFE3 /* ofxFFTFile.cpp */; };
 		087E18FB1E4765970051AFE3 /* ofxFFTLive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E18F71E4765970051AFE3 /* ofxFFTLive.cpp */; };
 		087E18FD1E476A280051AFE3 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 087E18FC1E476A280051AFE3 /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		087E19021E47B26F0051AFE3 /* ofxBlur.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E19001E47B26F0051AFE3 /* ofxBlur.cpp */; };
+		087E19041E47B2770051AFE3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 087E19031E47B2770051AFE3 /* readme.md */; };
+		087E19071E47D8670051AFE3 /* VideoOutputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E19051E47D8670051AFE3 /* VideoOutputManager.cpp */; };
 		0C8E6109528865C738BFD818 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A78388489306C3277E37BA4F /* SyphonNameboundClient.m */; };
 		10071661D0AA59C4EC246B6C /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4A1CE60B1AC164DA8880771 /* ofxGuiGroup.cpp */; };
 		1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5056FC61E30B9810903B814D /* AppManager.cpp */; };
@@ -114,6 +117,11 @@
 		087E18F71E4765970051AFE3 /* ofxFFTLive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxFFTLive.cpp; path = Addons/ofxFFT/src/ofxFFTLive.cpp; sourceTree = "<group>"; };
 		087E18F81E4765970051AFE3 /* ofxFFTLive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxFFTLive.h; path = Addons/ofxFFT/src/ofxFFTLive.h; sourceTree = "<group>"; };
 		087E18FC1E476A280051AFE3 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = src/Addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
+		087E19001E47B26F0051AFE3 /* ofxBlur.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxBlur.cpp; path = Addons/ofxBlur/src/ofxBlur.cpp; sourceTree = "<group>"; };
+		087E19011E47B26F0051AFE3 /* ofxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxBlur.h; path = Addons/ofxBlur/src/ofxBlur.h; sourceTree = "<group>"; };
+		087E19031E47B2770051AFE3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = Addons/ofxBlur/readme.md; sourceTree = "<group>"; };
+		087E19051E47D8670051AFE3 /* VideoOutputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoOutputManager.cpp; path = Layout/VideoOutputManager.cpp; sourceTree = "<group>"; };
+		087E19061E47D8670051AFE3 /* VideoOutputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoOutputManager.h; path = Layout/VideoOutputManager.h; sourceTree = "<group>"; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		09BB1D7613A1F9D8E8B11D7A /* KeyboardManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KeyboardManager.h; path = src/I0/KeyboardManager.h; sourceTree = SOURCE_ROOT; };
 		09F8F2DF1D53E65319F30B96 /* LightManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LightManager.cpp; path = src/Engine/3D/LightManager.cpp; sourceTree = SOURCE_ROOT; };
@@ -287,6 +295,24 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		087E18FE1E47B2590051AFE3 /* ofxBlur */ = {
+			isa = PBXGroup;
+			children = (
+				087E19031E47B2770051AFE3 /* readme.md */,
+				087E18FF1E47B2650051AFE3 /* src */,
+			);
+			name = ofxBlur;
+			sourceTree = "<group>";
+		};
+		087E18FF1E47B2650051AFE3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				087E19001E47B26F0051AFE3 /* ofxBlur.cpp */,
+				087E19011E47B26F0051AFE3 /* ofxBlur.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		0D2C0FD94F0CF315745D1C66 /* Syphon */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +372,8 @@
 		375D8B140B52B55EB32EB487 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				087E19051E47D8670051AFE3 /* VideoOutputManager.cpp */,
+				087E19061E47D8670051AFE3 /* VideoOutputManager.h */,
 				4907E8B0250B798D3E6F09A1 /* GuiManager.cpp */,
 				FF71FE1412779C0AE111BC56 /* GuiManager.h */,
 				4229475864D5EBC7913C8351 /* LayoutManager.cpp */,
@@ -515,6 +543,7 @@
 		AD642137CCDF61FB3E6CCEA2 /* Addons */ = {
 			isa = PBXGroup;
 			children = (
+				087E18FE1E47B2590051AFE3 /* ofxBlur */,
 				087E18ED1E47653B0051AFE3 /* ofxFFT */,
 				58C8D76E83509B9D19DA59D2 /* ofxGui */,
 				8C2FB3644A7D2F8FE6CD8E69 /* ofxSvg */,
@@ -834,8 +863,11 @@
 				875651AF8693D3DE4CC23485 /* VisualEffects.cpp in Sources */,
 				B790DA4F42194210B9259E42 /* VisualEffectsManager.cpp in Sources */,
 				5152A5DBF51A461014A1F631 /* KeyboardManager.cpp in Sources */,
+				087E19021E47B26F0051AFE3 /* ofxBlur.cpp in Sources */,
+				087E19071E47D8670051AFE3 /* VideoOutputManager.cpp in Sources */,
 				5D33A9513B2A4C6DBD3188C7 /* GuiManager.cpp in Sources */,
 				93510377552D47B6620A7586 /* LayoutManager.cpp in Sources */,
+				087E19041E47B2770051AFE3 /* readme.md in Sources */,
 				1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */,
 				DA22DA3A4F2E611DF50078F2 /* main.cpp in Sources */,
 				6F2BE491D50E9A13448AE90E /* ProtoPixelSyphonApp.cpp in Sources */,

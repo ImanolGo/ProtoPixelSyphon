@@ -67,6 +67,7 @@ void AppManager::setupManagers()
     m_viewManager.setup();
     m_visualEffectsManager.setup();
     m_layoutManager.setup();
+    m_videoOutputManager.setup();
     m_keyboardManager.setup();
     m_noiseManager.setup();
     m_videoManager.setup();
@@ -95,10 +96,14 @@ void AppManager::draw()
     ofBackground(55,55,55);
     m_viewManager.draw();
     m_guiManager.draw();
-    m_noiseManager.draw();
-    m_videoManager.draw();
-    m_audioVisualsManager.draw();
     
+    m_videoOutputManager.begin();
+        m_noiseManager.draw();
+        m_videoManager.draw();
+        m_audioVisualsManager.draw();
+    m_videoOutputManager.end();
+    
+    m_videoOutputManager.draw();
 }
 
 void AppManager::toggleDebugMode()

@@ -3,10 +3,10 @@
 
   <of_settings>
 
-      <window title="Hero Dress" x="0" y="0" width="1920" height="1200" fullscreen="0" showCursor="1"/>
+      <window title="Proto Pixel Syphon" x="0" y="0" width="960" height="600" fullscreen="0" showCursor="1"/>
 
       <debug showCursor="1" setVerbose="1"/>
-	    <network ipAddress="127.0.0.1" port="7890"/>
+	    <network ipAddress="127.0.0.1" port="7890" syphon="WindDressSyphon"/>
 
   </of_settings>
 

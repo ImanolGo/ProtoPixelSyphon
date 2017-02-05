@@ -42,7 +42,7 @@ class NoiseManager: public Manager
     
         //bool readToPixels(ofPixelsRef pix) {return m_fboReader.readToPixels(m_fbo, pix);}
     
-        void readToPixels(ofPixelsRef pix) {pix = m_noiseImage.getPixelsRef();}
+        void readToPixels(ofPixelsRef pix) {pix = m_noiseImage.getPixels();}
     
         float getWidth()  {return m_noiseImage.getWidth();}
     

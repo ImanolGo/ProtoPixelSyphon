@@ -49,14 +49,11 @@ void AudioVisualsManager::setup()
 
 void AudioVisualsManager::setupBoundingBox()
 {
-    float ratio = ((float)ofGetWidth())/ofGetHeight();
+    m_boundingBox.width = AppManager::getInstance().getVideoOutputManager().getVideoFbo().getWidth();
+    m_boundingBox.height = AppManager::getInstance().getVideoOutputManager().getVideoFbo().getHeight();
     
-    m_boundingBox.width = AppManager::getInstance().getGuiManager().getWidth();
-    m_boundingBox.height = m_boundingBox.width/ratio;
-    
-    
-    m_boundingBox.y = AppManager::getInstance().getGuiManager().getPosition().y + AppManager::getInstance().getGuiManager().getHeight() + 20;
-    m_boundingBox.x = AppManager::getInstance().getGuiManager().getPosition().x;
+    m_boundingBox.y = 0;
+    m_boundingBox.x = 0;
 }
 
 

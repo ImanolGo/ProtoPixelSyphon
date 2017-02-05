@@ -35,7 +35,31 @@
 		<Saturation>0</Saturation>
 		<Brightness>193.294</Brightness>
 	</Color>
-<group/>
+<group>
+		<FPS>59.9923</FPS>
+		<Modes>
+			<Video>1</Video>
+			<Noise>0</Noise>
+			<Audio>0</Audio>
+		</Modes>
+		<Color>
+			<Hue>15.6122</Hue>
+			<Saturation>0</Saturation>
+			<Brightness>255</Brightness>
+		</Color>
+		<Video>
+			<Record_Video_Loops>0</Record_Video_Loops>
+			<Video_Trail>0</Video_Trail>
+		</Video>
+		<Audio>
+			<Audio_Level>0.720117</Audio_Level>
+		</Audio>
+		<Noise>
+			<Noise_Resolution>130</Noise_Resolution>
+			<Noise_Frequency>0.4</Noise_Frequency>
+			<Noise_Speed>1</Noise_Speed>
+		</Noise>
+	</group>
 <HeroDress>
 		<FPS>58.9903</FPS>
 		<Modes>
