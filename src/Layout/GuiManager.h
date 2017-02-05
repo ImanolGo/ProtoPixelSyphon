@@ -52,7 +52,7 @@ public:
     
     void onSetAudioMode(bool& value);
     
-    int getWidth() {return GUI_WIDTH;}
+    int getWidth() {return GUI_WIDTH + 40;}
     
     int getHeight() {return m_gui.getHeight();}
     
@@ -91,6 +91,7 @@ private:
     ofxButton           m_nextVideo;
     ofParameter<bool>   m_recordVideoLoops;
     ofParameter<bool>   m_videoTrail;
+    ofParameter<float>  m_videoSpeed;
     
     ofParameter<float>    m_audioLevel;
     ofxButton             m_nextAudio;

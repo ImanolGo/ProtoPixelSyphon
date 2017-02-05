@@ -57,6 +57,8 @@ public:
     
     void onSaturationChange(float& value) {m_color.setSaturation(value);}
     
+    void onVideoSpeedChange(float& value) {m_videoPlayer.setSpeed(value);}
+    
 private:
     
     void setupFbo();

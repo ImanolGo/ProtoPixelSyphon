@@ -76,7 +76,6 @@ void VideoManager::loadVideos()
 
 void VideoManager::setupBoundingBox()
 {
-    
     m_boundingBox.width = AppManager::getInstance().getVideoOutputManager().getVideoFbo().getWidth();
     m_boundingBox.height = AppManager::getInstance().getVideoOutputManager().getVideoFbo().getHeight();
     

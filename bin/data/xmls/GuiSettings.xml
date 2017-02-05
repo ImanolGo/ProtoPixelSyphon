@@ -36,7 +36,7 @@
 		<Brightness>193.294</Brightness>
 	</Color>
 <group>
-		<FPS>59.9923</FPS>
+		<FPS>59.9426</FPS>
 		<Modes>
 			<Video>1</Video>
 			<Noise>0</Noise>
@@ -50,6 +50,7 @@
 		<Video>
 			<Record_Video_Loops>0</Record_Video_Loops>
 			<Video_Trail>0</Video_Trail>
+		<Speed>1.0102</Speed>
 		</Video>
 		<Audio>
 			<Audio_Level>0.720117</Audio_Level>

@@ -109,6 +109,10 @@ void GuiManager::setupVideoGui()
     
     m_parametersVideo.setName("Video");
     
+    m_videoSpeed.set("Speed", 1.0, 0.0, 2.0);
+    m_videoSpeed.addListener(videoManager, &VideoManager::onVideoSpeedChange);
+    m_parametersVideo.add(m_videoSpeed);
+    
     m_nextVideo.setup("Next Video");
     m_nextVideo.addListener(videoManager, &VideoManager::onNextVideoChange);
     
@@ -195,7 +199,7 @@ void GuiManager::drawRectangle()
 {
     ofPushStyle();
     ofSetColor(ofColor::black);
-    ofRect( m_gui.getPosition().x - 20, 0, GUI_WIDTH + 60, ofGetHeight());
+    ofDrawRectangle( m_gui.getPosition().x - 20, 0, GUI_WIDTH + 60, ofGetHeight());
     ofPopStyle();
 }
 
