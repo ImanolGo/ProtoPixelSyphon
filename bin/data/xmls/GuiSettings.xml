@@ -1,0 +1,69 @@
+<LedCostume>
+	<FPS>24.0093</FPS>
+	<Noise>
+		<Frequency>0.903469</Frequency>
+		<Time_Frequency>1</Time_Frequency>
+		<Magnitude>0.3</Magnitude>
+		<Grid_Size>6</Grid_Size>
+		<Grid_resolution>20</Grid_resolution>
+	<Noise_Frequency>3.47522</Noise_Frequency>
+		<Noise_Speed>0.324507</Noise_Speed>
+		<Input_Level>0</Input_Level>
+	<Noise_Resolution>44</Noise_Resolution>
+		<Noise_Hue>21</Noise_Hue>
+	<Noise_Saturation>193</Noise_Saturation>
+	<Noise_Brightness>255</Noise_Brightness>
+	<Record>0</Record>
+	</Noise>
+<LedCostume/>
+<Image_Export>
+		<Record>0</Record>
+	<Loop>1</Loop>
+	<Mirror>0</Mirror>
+	</Image_Export>
+<Modes>
+		<Video>1</Video>
+		<Noise>0</Noise>
+	<Audio>0</Audio>
+	</Modes>
+<Video/>
+<Audio>
+		<Audio_Level>0.897959</Audio_Level>
+	</Audio>
+<Color>
+		<Hue>156.122</Hue>
+		<Saturation>0</Saturation>
+		<Brightness>193.294</Brightness>
+	</Color>
+<group/>
+<HeroDress>
+		<FPS>58.9903</FPS>
+		<Modes>
+			<Video>1</Video>
+			<Noise>0</Noise>
+			<Audio>0</Audio>
+		</Modes>
+		<Color>
+			<Hue>105.569</Hue>
+			<Saturation>0</Saturation>
+			<Brightness>255</Brightness>
+		</Color>
+		<Image_Export>
+			<Record>0</Record>
+			<Mirror>0</Mirror>
+		</Image_Export>
+		<Video>
+			<Record_Video_Loops>0</Record_Video_Loops>
+			<Vide_Trail>0</Vide_Trail>
+		<Video_Trail>0</Video_Trail>
+		</Video>
+		<Audio>
+			<Audio_Level>0.5</Audio_Level>
+		</Audio>
+		<Noise>
+			<Noise_Resolution>72</Noise_Resolution>
+			<Noise_Frequency>0.932945</Noise_Frequency>
+			<Noise_Speed>0.175869</Noise_Speed>
+		</Noise>
+	</HeroDress>
+</LedCostume>
