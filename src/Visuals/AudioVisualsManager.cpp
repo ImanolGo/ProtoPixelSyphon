@@ -12,7 +12,7 @@
 #include "AppManager.h"
 
 
-const int AudioVisualsManager::NUMBER_VISUALS = 2;
+const int AudioVisualsManager::NUMBER_VISUALS = 3;
 const int AudioVisualsManager::FBO_WIDTH = 1030;
 const int AudioVisualsManager::FBO_HEIGHT = 524;
 
@@ -42,6 +42,7 @@ void AudioVisualsManager::setup()
     this->setupShader();
     this->setupParticles();
     this->setupRings();
+    this->setupStrobe();
 
     ofLogNotice() <<"AudioVisualsManager::initialized" ;
     
@@ -96,6 +97,11 @@ void AudioVisualsManager::setupRings()
     m_rings.setup();
 }
 
+void AudioVisualsManager::setupStrobe()
+{
+    m_strobe.setup();
+}
+
 
 void AudioVisualsManager::update()
 {
@@ -109,10 +115,13 @@ void AudioVisualsManager::update()
     switch (m_mode)
     {
         case 0:
-            this->updateRings();
+            this->updateStrobe();
             break;
         case 1:
             this->updateParticles();
+            break;
+        case 2:
+            this->updateRings();
             break;
         default:
             break;
@@ -152,6 +161,15 @@ void AudioVisualsManager::updateRings()
 }
 
 
+void AudioVisualsManager::updateStrobe()
+{
+    m_fftLive.update();
+    float audioMax = ofMap(m_fftLive.getAveragePeak(), 0.0, 0.3, 0.0, 1.0, true);
+    
+    m_strobe.setParameters(audioMax);
+    m_strobe.update();
+}
+
 void AudioVisualsManager::updateFbo()
 {
     
@@ -161,11 +179,14 @@ void AudioVisualsManager::updateFbo()
         switch (m_mode)
         {
             case 0:
-                this->drawRings();
+                this->drawStrobe();
                 break;
             case 1:
                 this->drawParticles();
-                break;            
+                break;
+            case 2:
+                this->drawRings();
+                break;
             default:
                 break;
         }
@@ -177,6 +198,10 @@ void AudioVisualsManager::updateFbo()
     m_fbo.readToPixels(pixels);
 }
 
+void AudioVisualsManager::drawStrobe()
+{
+    m_strobe.draw();
+}
 void AudioVisualsManager::drawParticles()
 {
     ofPushStyle();
@@ -217,6 +242,7 @@ void AudioVisualsManager::draw()
         return;
     }
     
+    ofSetColor(m_color);
     m_fbo.draw(m_boundingBox);
 }
 

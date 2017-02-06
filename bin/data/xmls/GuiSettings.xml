@@ -36,15 +36,15 @@
 		<Brightness>193.294</Brightness>
 	</Color>
 <group>
-		<FPS>32.5183</FPS>
+		<FPS>104.131</FPS>
 		<Modes>
 			<Video>0</Video>
 			<Noise>0</Noise>
 			<Audio>1</Audio>
 		</Modes>
 		<Color>
-			<Hue>76.7602</Hue>
-			<Saturation>0</Saturation>
+			<Hue>163.929</Hue>
+			<Saturation>255</Saturation>
 			<Brightness>255</Brightness>
 		<Blur>2.09184</Blur>
 		</Color>

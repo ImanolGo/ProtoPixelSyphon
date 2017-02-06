@@ -47,7 +47,9 @@ public:
     const ofFbo& getVideoFbo() {return m_fboVideoOutput;}
     
     void onBlurScaleChange(float& value);
-
+    
+   
+    
 private:
 
     //! Set-up the fbo
@@ -65,7 +67,7 @@ private:
     ofxSyphonServer     m_syphonServer;
     ofxBlur             m_blur;
     float               m_blurScale;
-
+    
 };
 
 //==========================================================================

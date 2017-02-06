@@ -50,14 +50,16 @@ void VideoManager::loadVideos()
     //shared_ptr<ofQTKitPlayer> videoPlayer = shared_ptr<ofQTKitPlayer>(new ofQTKitPlayer()) ;
     //m_videoPlayer.setPlayer(videoPlayer);
     
-    ofLogNotice()<< "VideoManager::loadVideos->loading samples from \""<<VIDEO_PATH<<"\"";
-    ofDirectory dir(VIDEO_PATH);
+    //string path = VIDEO_PATH;
+    string path = "/Users/imanolgo/MEGA/Video/ProtoPixelVideos";
+    ofLogNotice()<< "VideoManager::loadVideos->loading samples from \""<<path<<"\"";
+    ofDirectory dir(path);
     dir.allowExt("mp4");
     dir.allowExt("mov");
     dir.allowExt("avi");
     //populate the directory object
     if(dir.listDir()==0){
-        ofLogNotice()<< "VideoManager::loadVideos-> No samples found in \""<<VIDEO_PATH<<"\"";
+        ofLogNotice()<< "VideoManager::loadVideos-> No samples found in \""<<path<<"\"";
     }
     
     //go through and print out all the paths

@@ -14,6 +14,7 @@
 #include "ofxFFTLive.h"
 #include "AudioParticles.h"
 #include "AudioRings.h"
+#include "AudioStrobe.h"
 
 
 //========================== class AudioVisualsManager ==============================
@@ -53,6 +54,13 @@ class AudioVisualsManager: public Manager
         void  onNextAudiohange();
     
         void resetPosition();
+    
+    
+        void onHueChange(float& value) {m_color.setHue(value);}
+    
+        void onBrightnessChange(float& value) {m_color.setBrightness(value);}
+    
+        void onSaturationChange(float& value) {m_color.setSaturation(value);}
 
     
     private:
@@ -60,6 +68,8 @@ class AudioVisualsManager: public Manager
         void setupBoundingBox();
     
         void setupFbo();
+    
+        void setupStrobe();
     
         void setupShader();
     
@@ -73,6 +83,8 @@ class AudioVisualsManager: public Manager
     
         void updateParticles();
     
+        void updateStrobe();
+    
         void setupFft();
     
         void updateFft();
@@ -80,6 +92,8 @@ class AudioVisualsManager: public Manager
         void drawRings();
     
         void drawParticles();
+    
+        void drawStrobe();
     
     public:
     
@@ -97,9 +111,12 @@ class AudioVisualsManager: public Manager
     
         AudioParticles  m_particles;
         AudioRings      m_rings;
+        AudioStrobe     m_strobe;
 
         ofFbo               m_fbo;
         ofShader            m_shader;
+    
+        ofColor             m_color;
     
 };
 

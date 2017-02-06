@@ -86,18 +86,21 @@ void LayoutManager::onHueChange(float& value)
 {
     AppManager::getInstance().getVideoManager().onHueChange(value);
     AppManager::getInstance().getNoiseManager().onHueChange(value);
+    AppManager::getInstance().getAudioVisualsManager().onHueChange(value);
 }
 
 void LayoutManager::onBrightnessChange(float& value)
 {
     AppManager::getInstance().getVideoManager().onBrightnessChange(value);
     AppManager::getInstance().getNoiseManager().onBrightnessChange(value);
+    AppManager::getInstance().getAudioVisualsManager().onBrightnessChange(value);
 }
 
 void LayoutManager::onSaturationChange(float& value)
 {
     AppManager::getInstance().getVideoManager().onSaturationChange(value);
     AppManager::getInstance().getNoiseManager().onSaturationChange(value);
+    AppManager::getInstance().getAudioVisualsManager().onSaturationChange(value);
 }
 
 
