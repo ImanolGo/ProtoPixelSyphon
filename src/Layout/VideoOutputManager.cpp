@@ -77,9 +77,16 @@ void VideoOutputManager::draw()
 
 void VideoOutputManager::begin()
 {
+    int brightness = 255*AppManager::getInstance().getAudioManager().getAudioMax();
+    
+    //ofLogNotice() <<"VideoOutputManager::setupSyphon << brightness: " << brightness;
+
+    
+    ofPushStyle();
     m_fboVideoOutput.begin();
     m_blur.begin();
     ofClear(0);
+    ofSetColor(brightness);
 }
 
 void VideoOutputManager::end()
@@ -87,6 +94,7 @@ void VideoOutputManager::end()
      m_blur.end();
      m_blur.draw();
      m_fboVideoOutput.end();
+     ofPopStyle();
     
 }
 

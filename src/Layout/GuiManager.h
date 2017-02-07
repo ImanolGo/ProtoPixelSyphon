@@ -94,6 +94,7 @@ private:
     ofParameter<float>  m_videoSpeed;
     
     ofParameter<float>    m_audioLevel;
+    ofParameter<bool>     m_audioOn;
     ofxButton             m_nextAudio;
     
     ofParameter<bool>     m_videoMode;

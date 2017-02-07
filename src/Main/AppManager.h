@@ -24,6 +24,7 @@
 #include "VideoManager.h"
 #include "AudioVisualsManager.h"
 #include "VideoOutputManager.h"
+#include "AudioManager.h"
 
 
 //========================== class AppManager ==============================
@@ -84,6 +85,8 @@ public:
     //! Returns the video output manager
     VideoOutputManager&   getVideoOutputManager() { return m_videoOutputManager; }
     
+    //! Returns the audio  manager
+    AudioManager&  getAudioManager() { return m_audioManager; }
     
     //==========================================================================
     
@@ -128,6 +131,7 @@ private:
     VideoManager             m_videoManager;             ///< Manages the video  visuals
     AudioVisualsManager      m_audioVisualsManager;      ///< Manages the audio reactive visuals
     VideoOutputManager       m_videoOutputManager;       ///< Manages the video output
+    AudioManager             m_audioManager;             ///< Manages the audio manager
 
     bool                     m_debugMode;
 };

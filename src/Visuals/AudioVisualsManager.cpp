@@ -38,7 +38,6 @@ void AudioVisualsManager::setup()
     
     this->setupBoundingBox();
     this->setupFbo();
-    this->setupFft();
     this->setupShader();
     this->setupParticles();
     this->setupRings();
@@ -55,17 +54,6 @@ void AudioVisualsManager::setupBoundingBox()
     
     m_boundingBox.y = 0;
     m_boundingBox.x = 0;
-}
-
-
-void AudioVisualsManager::setupFft()
-{
-    m_fftLive.setMirrorData(false);
-    m_fftLive.setup();
-    m_fftLive.setThreshold(1.01);
-    m_fftLive.setPeakDecay(0.915);
-    m_fftLive.setMaxDecay(0.995);
-
 }
 
 void AudioVisualsManager::setupFbo()
@@ -109,9 +97,6 @@ void AudioVisualsManager::update()
         return;
     }
     
-    
-    this->updateFft();
-    
     switch (m_mode)
     {
         case 0:
@@ -130,41 +115,27 @@ void AudioVisualsManager::update()
     this->updateFbo();
 }
 
-void AudioVisualsManager::updateFft()
-{
-    m_fftLive.update();
-}
 
 void AudioVisualsManager::updateParticles()
 {
-    int numOfVerts = 3;
+    float audioMax = AppManager::getInstance().getAudioManager().getAudioMax();
     
-    float * audioData = new float[numOfVerts];
-    m_fftLive.getFftPeakData(audioData, numOfVerts);
-    
-    m_particles.setParameters(audioData[0], audioData[2]);
+    m_particles.setParameters(audioMax, audioMax);
     m_particles.update();
-    
-    delete[] audioData;
 }
 
 void AudioVisualsManager::updateRings()
 {
-    int numOfVerts = 3;
-    float * audioData = new float[numOfVerts];
-    m_fftLive.getFftPeakData(audioData, numOfVerts);
+    float audioMax = AppManager::getInstance().getAudioManager().getAudioMax();
     
-    m_rings.setParameters(audioData[0], audioData[2]);
+    m_rings.setParameters(audioMax, audioMax);
     m_rings.update();
-    
-    delete[] audioData;
 }
 
 
 void AudioVisualsManager::updateStrobe()
 {
-    m_fftLive.update();
-    float audioMax = ofMap(m_fftLive.getAveragePeak(), 0.0, 0.3, 0.0, 1.0, true);
+   float audioMax = AppManager::getInstance().getAudioManager().getAudioMax();
     
     m_strobe.setParameters(audioMax);
     m_strobe.update();

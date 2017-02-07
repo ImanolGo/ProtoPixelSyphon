@@ -92,7 +92,7 @@ void AudioParticles::draw()
         {
             if (m_particles[j]->m_position.distance(m_particles[k]->m_position) < DISTANCE_THRESHOLD)
             {
-                ofLine( m_particles[j]->m_position, m_particles[k]->m_position );
+                ofDrawLine( m_particles[j]->m_position, m_particles[k]->m_position );
             }
         }
     }

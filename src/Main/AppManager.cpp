@@ -71,18 +71,16 @@ void AppManager::setupManagers()
     m_keyboardManager.setup();
     m_noiseManager.setup();
     m_videoManager.setup();
+    m_audioManager.setup();
     m_audioVisualsManager.setup();
     m_guiManager.setup();
-    m_noiseManager.resetPosition();
-    m_videoManager.resetPosition();
-    m_audioVisualsManager.resetPosition();
-    
 }
 
 void AppManager::update()
 {
     m_visualEffectsManager.update();
     m_viewManager.update();
+    m_audioManager.update();
     m_noiseManager.update();
     m_videoManager.update();
     m_audioVisualsManager.update();

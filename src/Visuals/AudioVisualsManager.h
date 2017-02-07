@@ -11,7 +11,6 @@
 
 #include "Manager.h"
 
-#include "ofxFFTLive.h"
 #include "AudioParticles.h"
 #include "AudioRings.h"
 #include "AudioStrobe.h"
@@ -85,10 +84,6 @@ class AudioVisualsManager: public Manager
     
         void updateStrobe();
     
-        void setupFft();
-    
-        void updateFft();
-    
         void drawRings();
     
         void drawParticles();
@@ -106,7 +101,6 @@ class AudioVisualsManager: public Manager
         ofRectangle     m_boundingBox;
         int             m_mode;
     
-        ofxFFTLive      m_fftLive;
         float           m_inputLevel;
     
         AudioParticles  m_particles;

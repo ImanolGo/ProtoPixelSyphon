@@ -18,6 +18,7 @@
 		087E19041E47B2770051AFE3 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 087E19031E47B2770051AFE3 /* readme.md */; };
 		087E19071E47D8670051AFE3 /* VideoOutputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E19051E47D8670051AFE3 /* VideoOutputManager.cpp */; };
 		087E190A1E487B100051AFE3 /* AudioStrobe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 087E19081E487B100051AFE3 /* AudioStrobe.cpp */; };
+		0888E18B1E4898CC00084B9B /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0888E1891E4898CC00084B9B /* AudioManager.cpp */; };
 		0C8E6109528865C738BFD818 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A78388489306C3277E37BA4F /* SyphonNameboundClient.m */; };
 		10071661D0AA59C4EC246B6C /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4A1CE60B1AC164DA8880771 /* ofxGuiGroup.cpp */; };
 		1AF15FCF93D2DDD6D4285C8E /* AppManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5056FC61E30B9810903B814D /* AppManager.cpp */; };
@@ -125,6 +126,8 @@
 		087E19061E47D8670051AFE3 /* VideoOutputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoOutputManager.h; path = Layout/VideoOutputManager.h; sourceTree = "<group>"; };
 		087E19081E487B100051AFE3 /* AudioStrobe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioStrobe.cpp; path = Visuals/AudioStrobe.cpp; sourceTree = "<group>"; };
 		087E19091E487B100051AFE3 /* AudioStrobe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioStrobe.h; path = Visuals/AudioStrobe.h; sourceTree = "<group>"; };
+		0888E1891E4898CC00084B9B /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioManager.cpp; path = Visuals/AudioManager.cpp; sourceTree = "<group>"; };
+		0888E18A1E4898CC00084B9B /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = Visuals/AudioManager.h; sourceTree = "<group>"; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		09BB1D7613A1F9D8E8B11D7A /* KeyboardManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KeyboardManager.h; path = src/I0/KeyboardManager.h; sourceTree = SOURCE_ROOT; };
 		09F8F2DF1D53E65319F30B96 /* LightManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LightManager.cpp; path = src/Engine/3D/LightManager.cpp; sourceTree = SOURCE_ROOT; };
@@ -607,6 +610,8 @@
 		C02C33831C66F04FEBAE29DE /* Visuals */ = {
 			isa = PBXGroup;
 			children = (
+				0888E1891E4898CC00084B9B /* AudioManager.cpp */,
+				0888E18A1E4898CC00084B9B /* AudioManager.h */,
 				087E19081E487B100051AFE3 /* AudioStrobe.cpp */,
 				087E19091E487B100051AFE3 /* AudioStrobe.h */,
 				6D8CDC21948DA9729C956FEC /* AudioParticles.cpp */,
@@ -850,6 +855,7 @@
 				B7993B374B98F50CBD9EC220 /* README.md in Sources */,
 				087E18FB1E4765970051AFE3 /* ofxFFTLive.cpp in Sources */,
 				20DD9BBB631FBC0CDCCFA6B6 /* ofTextConverter.cpp in Sources */,
+				0888E18B1E4898CC00084B9B /* AudioManager.cpp in Sources */,
 				7E78555D595408C86F902937 /* ofUnicode.cpp in Sources */,
 				EC108074DB75C3CD93A7DADF /* ofUTF8.cpp in Sources */,
 				48F94177806B5CB8D3C0F283 /* CameraAnimations.cpp in Sources */,

@@ -133,16 +133,21 @@ void GuiManager::setupVideoGui()
 
 void GuiManager::setupAudioGui()
 {
-    auto audioManager = &AppManager::getInstance().getAudioVisualsManager();
+    auto audioVisualManager = &AppManager::getInstance().getAudioVisualsManager();
+    auto audioManager = &AppManager::getInstance().getAudioManager();
     
     m_parametersAudio.setName("Audio");
     
     m_audioLevel.set("Audio Level",  0.5, 0.0, 1.0 );
-    m_audioLevel.addListener(audioManager, &AudioVisualsManager::onInputLevelChange);
+    m_audioLevel.addListener(audioVisualManager, &AudioVisualsManager::onInputLevelChange);
     m_parametersAudio.add(m_audioLevel);
     
+    m_audioOn.set("Audio On", false);
+    m_audioOn.addListener(audioManager, &AudioManager::onChangeAudioOn);
+    m_parametersAudio.add(m_audioOn);
+    
     m_nextAudio.setup("Next Visual");
-    m_nextAudio.addListener(audioManager, &AudioVisualsManager::onNextAudiohange);
+    m_nextAudio.addListener(audioVisualManager, &AudioVisualsManager::onNextAudiohange);
     
     m_gui.add(m_parametersAudio);
     m_gui.add(&m_nextAudio);
